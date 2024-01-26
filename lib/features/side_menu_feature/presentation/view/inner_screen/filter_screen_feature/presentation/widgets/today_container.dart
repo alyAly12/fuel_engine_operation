@@ -4,11 +4,12 @@ import 'package:sizer/sizer.dart';
 import '../../../../../../../../core/component/custom_text_widget.dart';
 import '../../../../../../../../core/utils/app_strings.dart';
 class TodayDateContainer extends StatelessWidget {
-  const TodayDateContainer({super.key, required this.buttonColor, required this.titleColor, required this.border, required this.onTap});
+  const TodayDateContainer({super.key, required this.buttonColor, required this.titleColor, required this.border, required this.onTap, required this.containerName});
   final Color buttonColor;
   final Color titleColor;
   final BoxBorder border;
   final Function onTap;
+  final String containerName;
   @override
   Widget build(BuildContext context) {
     final DateTime now = DateTime.now();
@@ -30,7 +31,7 @@ class TodayDateContainer extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               CustomTextWidget(
-                title: AppStrings.today,
+                title: containerName,
                 fontSize: 11,
                 fontWeight: FontWeight.w600,
                 color:titleColor,
