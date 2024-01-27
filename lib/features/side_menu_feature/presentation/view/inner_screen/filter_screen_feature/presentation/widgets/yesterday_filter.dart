@@ -9,30 +9,16 @@ import 'custom_filter_text_field.dart';
 
 class YesterdayCustomContainer extends StatefulWidget {
   const YesterdayCustomContainer({
-    super.key,
+    super.key, required this.yesterdayToController, required this.yesterdayFromController,
   });
-
+  final TextEditingController yesterdayToController;
+  final TextEditingController yesterdayFromController;
 
   @override
   State<YesterdayCustomContainer> createState() => _YesterdayCustomContainerState();
 }
 
 class _YesterdayCustomContainerState extends State<YesterdayCustomContainer> {
-  late TextEditingController toController;
-  late TextEditingController fromController;
-  @override
-  void initState() {
-    toController =TextEditingController();
-    fromController =TextEditingController();
-    super.initState();
-  }
-  @override
-  void dispose() {
-    toController.dispose();
-    fromController.dispose();
-    super.dispose();
-  }
-
   bool _yesterdayPressed = false;
 
   @override
@@ -60,11 +46,11 @@ class _YesterdayCustomContainerState extends State<YesterdayCustomContainer> {
               flex: 1,
               child: CustomFilterTextField(
                 enabled: _yesterdayPressed,
-                controller: toController,
+                controller: widget.yesterdayFromController,
                 fillColor: _yesterdayPressed?Colors.white:const Color(0xffe6eaee),
                 labelText: AppStrings.from,
                 onTap: ()async{
-                  await pickTime(controller: toController, context: context);
+                  await pickTime(controller: widget.yesterdayFromController, context: context);
                   setState(() {});
                 },
               ),
@@ -74,15 +60,18 @@ class _YesterdayCustomContainerState extends State<YesterdayCustomContainer> {
               flex: 1,
               child: CustomFilterTextField(
                 enabled: _yesterdayPressed,
-                controller: fromController,
+                controller: widget.yesterdayToController,
                 fillColor: _yesterdayPressed?Colors.white:const Color(0xffe6eaee),
                 labelText: AppStrings.to,
                 onTap: ()async{
-                  await pickTime(controller: fromController, context: context);
+                  await pickTime(controller: widget.yesterdayToController, context: context);
                   setState(() {});
                 },
               ),
             ),
+            Flexible(
+                flex: 1,
+                child: SizedBox(width: 4.w,)),
           ],
         ),
       ],

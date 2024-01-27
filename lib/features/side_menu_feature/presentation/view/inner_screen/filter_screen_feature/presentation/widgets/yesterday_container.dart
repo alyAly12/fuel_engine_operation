@@ -24,10 +24,10 @@ class YesterdayContainer extends StatelessWidget {
             border:border
         ),
         child: Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 6.w,vertical: 1.5.h),
+          padding:  EdgeInsets.symmetric(horizontal: 8.w,vertical: 1.5.h),
           child: CustomTextWidget(
             title: AppStrings.yesterday,
-            fontSize: 11,
+            fontSize: 9.sp,
             fontWeight: FontWeight.w600,
             color:titleColor,
           ),

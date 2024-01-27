@@ -19,4 +19,5 @@ class AssetsManager
   static String ksaLogo ='assets/images/ksa-logo.svg';
   static String plateLogo ='assets/images/plate-logo.svg';
   static String closeIcon ='assets/images/close-icon.svg';
+  static String rightSign ='assets/images/right-sign.svg';
 }

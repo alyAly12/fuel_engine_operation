@@ -21,24 +21,12 @@ class AllDayButton extends StatelessWidget {
             border:border
         ),
         child: Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 3.w,vertical: 1.5.h),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              CustomTextWidget(
-                title: AppStrings.today,
-                fontSize: 11,
-                fontWeight: FontWeight.w600,
-                color:titleColor,
-              ),
-              const SizedBox(width: 5,),
-              CustomTextWidget(
-                  title: AppStrings.allDay,
-                  fontSize: 11,
-                  fontWeight: FontWeight.w600,
-                  color:titleColor)
-            ],
-          ),
+          padding:  EdgeInsets.symmetric(horizontal: 6.w,vertical: 1.5.h),
+          child: CustomTextWidget(
+              title: AppStrings.allDay,
+              fontSize: 11,
+              fontWeight: FontWeight.w600,
+              color:titleColor),
         ),
       ),
     );

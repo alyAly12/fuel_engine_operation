@@ -49,4 +49,13 @@ class AppStrings
   static String to ='To';
   static String yesterday='Yesterday';
   static String allDay ='All Day';
+  static String fuel='FUEL';
+  static String oil ='OIL ';
+  static String gsa91='GAS 91';
+  static String gas95 ='GAS 95';
+  static String diesel='DIESEL';
+  static String selectVehicle ='Select Vehicle';
+  static String orderType='Order type';
+  static String product='Product';
+  static String apply ='Apply';
 }
