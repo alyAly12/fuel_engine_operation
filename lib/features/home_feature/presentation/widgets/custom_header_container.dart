@@ -48,7 +48,7 @@ class CustomHeaderContainer extends StatelessWidget {
                 padding:  EdgeInsets.symmetric(horizontal: 2.w),
                 child: GestureDetector(
                   onTap: (){
-                    // TODO: Navigate to notification scree
+                   GoRouter.of(context).push(AppRoute.kNotificationView);
                   },
                   child: Badge(
                       label: const Text('3'),

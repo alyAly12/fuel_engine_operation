@@ -58,4 +58,7 @@ class AppStrings
   static String orderType='Order type';
   static String product='Product';
   static String apply ='Apply';
+  static String notification ='Notifications';
+  static String back ='Back';
+  static String systemRequirement ='System requirements';
 }

@@ -27,4 +27,5 @@ class AppColors {
   static const Color confirmColor =Color(0xff1FC592);
   static const Color customKeyboardColor = Color(0xffF1F0F5);
   static const Color vehicleColor = Color(0xff92A7B5);
+  static const containerColor =Color(0xffEBEDEF);
 }

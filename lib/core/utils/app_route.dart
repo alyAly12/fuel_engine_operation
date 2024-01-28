@@ -1,6 +1,7 @@
 import 'package:activation_app/core/component/custom_issue_sent_success_screen.dart';
 import 'package:activation_app/features/home_feature/presentation/view/home_screen.dart';
 import 'package:activation_app/features/home_feature/presentation/view/report_issue_screen.dart';
+import 'package:activation_app/features/home_feature/presentation/widgets/notification_widget/notification_view.dart';
 import 'package:activation_app/features/pairing_feature/presentation/view/pairing_view.dart';
 import 'package:activation_app/features/scan_feature/presentation/view/scan_screen.dart';
 import 'package:activation_app/features/scan_feature/presentation/view/vehicle_activation_screen.dart';
@@ -30,6 +31,7 @@ abstract class AppRoute
   static const kAboutAppView ='/aboutAppView';
   static const kHistoryView ='/historyView';
   static const kFilterView ='/filterView';
+  static const kNotificationView ='/notificationView';
 
 static final router = GoRouter(
     routes: [
@@ -152,6 +154,15 @@ static final router = GoRouter(
           context: context,
           state: state,
           child: const FilterScreen(),
+        ),
+      ),
+      GoRoute(
+        path: kNotificationView,
+        builder:(context,state)=>const NotificationScreen(),
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const NotificationScreen(),
         ),
       ),
     ]);
