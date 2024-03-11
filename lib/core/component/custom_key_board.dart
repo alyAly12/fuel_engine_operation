@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
+import '../common_state/custom_keyboard_bloc.dart';
 import '../utils/app_colors.dart';
 import 'custom_text_widget.dart';
 
 class CustomKeyBoard extends StatefulWidget {
   final TextEditingController controller;
   final FocusNode focusNode;
-  const CustomKeyBoard({super.key, required this.controller, required this.focusNode});
+
+  const CustomKeyBoard(
+      {super.key, required this.controller, required this.focusNode});
 
   @override
   State<CustomKeyBoard> createState() => _CustomKeyBoardState();
@@ -17,6 +21,8 @@ class _CustomKeyBoardState extends State<CustomKeyBoard> {
   late TextSelection _selection;
   late FocusNode _focusNode;
   String temp = '';
+
+  var max = 3;
 
   @override
   void initState() {
@@ -37,14 +43,15 @@ class _CustomKeyBoardState extends State<CustomKeyBoard> {
       _selection = _controller.selection;
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       decoration: const BoxDecoration(
         color: AppColors.customKeyboardColor,
       ),
       child: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 1.w),
+        padding: EdgeInsets.symmetric(horizontal: 1.w),
         child: Column(
           children: [
             Row(
@@ -63,7 +70,6 @@ class _CustomKeyBoardState extends State<CustomKeyBoard> {
                 _buildButton('T'),
                 _buildButton('E'),
                 _buildButton('G'),
-
               ],
             ),
             Row(
@@ -90,6 +96,7 @@ class _CustomKeyBoardState extends State<CustomKeyBoard> {
       ),
     );
   }
+
   // _hideKeyboard() => _focusNode.unfocus();
   Widget _buildButton(String text, {VoidCallback? onPressed}) {
     return Expanded(
@@ -99,21 +106,37 @@ class _CustomKeyBoardState extends State<CustomKeyBoard> {
           style: TextButton.styleFrom(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)
-              )
+                  borderRadius: BorderRadius.circular(8))),
+          onPressed: onPressed ??
+                  () {
+                if (context
+                    .read<CustomKeyboardBloc>()
+                    .state
+                    .textEditingController
+                    .text
+                    .length ==
+                    context.read<CustomKeyboardBloc>().state.length) {
+                  return;
+                }
+                _input(text);
+              },
+          child: CustomTextWidget(
+            title: text,
+            color: AppColors.appBarColor,
+            fontSize: 10.sp,
+            fontWeight: FontWeight.bold,
           ),
-          onPressed: onPressed ?? () => _input(text),
-          child: CustomTextWidget(title: text,color: AppColors.appBarColor,fontSize: 10.sp,fontWeight: FontWeight.bold,),
         ),
       ),
     );
   }
+
   void _input(String text) {
     int position = _selection.base.offset;
     var value = _controller.text;
-    if (value.isNotEmpty ) {
-      var suffix = value.substring(position, value.length );
-      value = value.substring(0, position ) + text + suffix;
+    if (value.isNotEmpty) {
+      var suffix = value.substring(position, value.length);
+      value = value.substring(0, position) + text + suffix;
       _controller.text = value;
       _controller.selection =
           TextSelection.fromPosition(TextPosition(offset: position + 1));
@@ -124,6 +147,7 @@ class _CustomKeyBoardState extends State<CustomKeyBoard> {
           TextSelection.fromPosition(const TextPosition(offset: 1));
     }
   }
+
   void _backspace() {
     int position = _selection.base.offset;
     final value = _controller.text;

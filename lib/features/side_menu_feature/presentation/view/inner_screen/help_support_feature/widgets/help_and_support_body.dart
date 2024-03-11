@@ -59,7 +59,7 @@ class _HelpAndSupportBodyState extends State<HelpAndSupportBody> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 5.h,),
-                CustomTextWidget(title: AppStrings.title,color: AppColors.orderNumberColor,fontSize: 11.sp,),
+                CustomTextWidget(title: AppStrings.title,color: AppColors.orderNumberColor,fontSize: 13.sp,),
                 SizedBox(height: 0.1.h,),
                 CustomHelpTextForm(
                   controller: titleController,
@@ -73,7 +73,7 @@ class _HelpAndSupportBodyState extends State<HelpAndSupportBody> {
                   } ,
                 ),
                 SizedBox(height: 5.h,),
-                CustomTextWidget(title: AppStrings.message,color: AppColors.orderNumberColor,fontSize: 11.sp,),
+                CustomTextWidget(title: AppStrings.message,color: AppColors.orderNumberColor,fontSize: 13.sp,),
                 SizedBox(height: 0.1.h,),
                 SizedBox(
                   height: 20.h,

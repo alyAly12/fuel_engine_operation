@@ -1,9 +1,10 @@
+import 'package:activation_app/core/component/custom_regular_appBar.dart';
 import 'package:activation_app/core/utils/app_route.dart';
+import 'package:activation_app/core/utils/app_strings.dart';
 import 'package:activation_app/features/side_menu_feature/presentation/view/inner_screen/history_feature/presentation/widget/history_screen_body.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../../../../../../core/utils/app_colors.dart';
 
 
@@ -13,14 +14,20 @@ class HistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      appBar: PreferredSize(preferredSize: const Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight),
+          child: CustomRegularAppBar(
+            backColor: Colors.white,
+              mainTitle: AppStrings.history,
+              actionTitle: AppStrings.back,
+          ),),
       floatingActionButton: Padding(
         padding:  EdgeInsets.only(bottom: 5.h),
         child: FloatingActionButton(
           onPressed: (){
           GoRouter.of(context).push(AppRoute.kFilterView);
           },
-          backgroundColor: Colors.white,
-          child: const Icon(Icons.filter_list_outlined,size: 30,color:AppColors.darkGrey,),
+          backgroundColor: AppColors.backGroundColor,
+          child: const Icon(Icons.search,size: 30,color:AppColors.darkGrey,),
         ),
       ),
 

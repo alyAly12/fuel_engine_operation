@@ -19,14 +19,15 @@ class _CustomToggleButtonsState extends State<CustomToggleButtons> {
   @override
   Widget build(BuildContext context) {
     return ToggleButtons(
-      selectedColor: AppColors.appBarColor,
+      selectedColor: Colors.white,
       color:AppColors.lightTitleColor,
-      fillColor: Colors.white,
+      fillColor: AppColors.redColor,
       renderBorder: true,
       borderColor: AppColors.borderContainerColor,
       borderWidth: 1,
+      splashColor: Colors.transparent,
       borderRadius: BorderRadius.circular(0),
-      selectedBorderColor:AppColors.appBarColor ,
+      selectedBorderColor:AppColors.redColor,
       isSelected: isSelected,
       children: [
         Padding(
@@ -35,7 +36,7 @@ class _CustomToggleButtonsState extends State<CustomToggleButtons> {
             children: [
               SvgPicture.asset(AssetsManager.operationLogo,),
               SizedBox(width: 2.w,),
-              CustomTextWidget(title: AppStrings.operation,fontSize: 12.sp,)
+              CustomTextWidget(title: AppStrings.operation,)
             ],
           ),
         ),
@@ -45,7 +46,7 @@ class _CustomToggleButtonsState extends State<CustomToggleButtons> {
             children: [
               SvgPicture.asset(AssetsManager.partnerLogo),
               SizedBox(width: 2.w,),
-              CustomTextWidget(title: AppStrings.partner,fontSize: 12.sp,)
+              CustomTextWidget(title: AppStrings.partner)
             ],
           ),
         ),

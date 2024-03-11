@@ -10,7 +10,7 @@ class CustomLogButton extends StatelessWidget {
         required this.color,
         required this.title,
         required this.showIcon,
-         this.textSize =16, this.textColor =Colors.white, this.textWeight});
+         this.textSize , this.textColor =Colors.white, this.textWeight});
   final void Function() onPressed;
   final Color color;
   final String title;
@@ -35,7 +35,7 @@ class CustomLogButton extends StatelessWidget {
             children: [
               CustomTextWidget(
                 title: title,
-                fontSize:textSize??16,
+                fontSize:textSize??14.sp,
                 fontWeight:textWeight?? FontWeight.w300,
                 color: textColor,
               ),

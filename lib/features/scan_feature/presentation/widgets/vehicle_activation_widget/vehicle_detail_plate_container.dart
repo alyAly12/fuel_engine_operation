@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../../../core/common_state/custom_keyboard_bloc.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/assets_manager.dart';
 import 'custom_issue_text_field.dart';
@@ -71,6 +73,7 @@ class VehicleDetailsPlateContainer extends StatelessWidget {
                         //           height: 30.h,
                         //           child: letterNode.hasFocus?CustomKeyBoard(controller: carLetter, focusNode: letterNode):Container());
                         //     });
+                        context.read<CustomKeyboardBloc>().add(SetKeyboardLengthEvent(textEditingController: carLetter, length: 3));
                       },
                       onFieldSubmitted: onLetterFieldSubmitted,
                       focusNode: letterNode,

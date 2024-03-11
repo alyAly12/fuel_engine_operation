@@ -20,7 +20,7 @@ void readNFCTag(BuildContext context) async {
   }
 
   var tag = await FlutterNfcKit.poll(
-      timeout: Duration(seconds: 50),
+      timeout: const Duration(seconds: 50),
       iosMultipleTagMessage: "Multiple tags found!",
       iosAlertMessage: "Scan your tag");
 

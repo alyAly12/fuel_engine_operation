@@ -32,8 +32,8 @@ class AppStrings
   static String plate = 'Plate';
   static String chipNum ='Smart Chip';
   static String activate ='Activate';
-  static String numbers ='NUMBERS';
-  static String letters ='LETTERS';
+  static String numbers ='Numbers';
+  static String letters ='Letters';
   static String activatedSuccessfully ='Activated Successfully';
   static String setting ='Setting';
   static String help ='Help & Support';
@@ -43,7 +43,7 @@ class AppStrings
   static String title ='Title';
   static String message ='Message';
   static String about ='About App';
-  static String orderFilter ='Order Filtration';
+  static String historyFilter ='History Filtration';
   static String today ='Today';
   static String from='From';
   static String to ='To';
@@ -61,4 +61,16 @@ class AppStrings
   static String notification ='Notifications';
   static String back ='Back';
   static String systemRequirement ='System requirements';
+  static String nfcDamage ='NFC sticker damaged';
+  static String nfcDedicate ='NFC can\'t dedicated';
+  static String nfcNotWell ='Sticker place not unwell';
+  static String emptyScreenTitle='there is no orders';
+  static String search ='Search';
+  static String profile ='Profile';
+  static String chillOut='ChillOut';
+  static String active ='Active';
+  static String status = 'Status:';
+  static String activationDate = 'Activation Date:';
+  static String stationName ='Station Name:';
+
 }

@@ -49,7 +49,7 @@ class _PairingViewBodyState extends State<PairingViewBody> {
     final isValid = formKey.currentState!.validate();
     FocusScope.of(context).unfocus();
     if (isValid) {
-      GoRouter.of(context).pushReplacement(AppRoute.kHomeView);
+      GoRouter.of(context).pushReplacement(AppRoute.kEmptyHomeScreen);
     }
   }
 
@@ -100,13 +100,7 @@ class _PairingViewBodyState extends State<PairingViewBody> {
                       SizedBox(
                         height: 4.h,
                       ),
-                      Row(
-                        children: [
-                          CustomTextWidget(title: AppStrings.passWord,fontSize: 10.sp,),
-                          const Spacer(),
-                          CustomTextWidget(title: AppStrings.forgetPass,fontSize: 10.sp,color: AppColors.redColor,),
-                        ],
-                      ),
+                      CustomTextWidget(title: AppStrings.passWord,fontSize: 10.sp,),
                       SizedBox(
                         height: 1.h,
                       ),
@@ -136,6 +130,10 @@ class _PairingViewBodyState extends State<PairingViewBody> {
                       ),
                     ],
                   ),),
+              SizedBox(height: 2.h,),
+              Align(
+                  alignment: Alignment.topRight,
+                  child: CustomTextWidget(title: AppStrings.forgetPass,fontSize: 10.sp,color: AppColors.redColor,)),
               SizedBox(
                 height: 10.h,
               ),
@@ -145,7 +143,6 @@ class _PairingViewBodyState extends State<PairingViewBody> {
                   },
                   color:AppColors.redColor,
                   title: AppStrings.login,
-                  textSize: 13.sp,
                   textWeight: FontWeight.w500,
                   showIcon: false
               )

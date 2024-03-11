@@ -31,7 +31,7 @@ class ScanViewBody extends StatelessWidget {
               children: [
                 SvgPicture.asset(AssetsManager.errorMark,),
                 SizedBox(width: 1.w,),
-                CustomTextWidget(title: AppStrings.reportIssue,fontSize: 10.sp,fontWeight: FontWeight.w400,color: AppColors.redColor,)
+                CustomTextWidget(title: AppStrings.reportIssue,fontSize: 12.sp,fontWeight: FontWeight.w400,color: AppColors.redColor,)
               ],
             ),
           )

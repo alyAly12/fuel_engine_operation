@@ -3,12 +3,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sizer/sizer.dart';
 import '../../../../../../../../core/component/custom_text_widget.dart';
-import '../../../../../../../../core/utils/app_strings.dart';
 import '../../../../../../../../core/utils/assets_manager.dart';
 
 class CustomFilterHeader extends StatelessWidget {
-  const CustomFilterHeader({super.key});
-
+  const CustomFilterHeader({super.key, required this.headTitle});
+final String headTitle;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,7 +15,7 @@ class CustomFilterHeader extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CustomTextWidget(title: AppStrings.orderFilter,fontSize: 14.sp,),
+          CustomTextWidget(title:headTitle,fontSize: 15.sp,),
           GestureDetector(
               onTap: (){
                 GoRouter.of(context).pop();

@@ -36,8 +36,8 @@ class PickImageFunction extends StatelessWidget {
               );
             },
             child: Container(
-              width: 18.h,
-              height: 18.h,
+              width: 15.h,
+              height: 15.h,
               decoration: const BoxDecoration(
                   shape: BoxShape.circle, color: Colors.transparent),
               child: ClipOval(

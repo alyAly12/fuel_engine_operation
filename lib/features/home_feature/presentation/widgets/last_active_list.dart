@@ -9,7 +9,7 @@ class LastActiveList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-        padding: const EdgeInsets.only(top: 1),
+        padding:  EdgeInsets.only(top: 1.h),
         itemBuilder: (context,index){
           return const LastActiveListItem();
         },

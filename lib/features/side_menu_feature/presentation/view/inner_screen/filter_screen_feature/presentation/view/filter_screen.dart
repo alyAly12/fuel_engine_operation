@@ -7,8 +7,13 @@ class FilterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
-     body:FilterScreenBody() ,
+    return  GestureDetector(
+      onTap: (){
+        FocusScope.of(context).unfocus();
+      },
+      child: const Scaffold(
+       body:FilterScreenBody() ,
+      ),
     );
   }
 }

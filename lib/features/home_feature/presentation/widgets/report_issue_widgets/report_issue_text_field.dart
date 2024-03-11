@@ -16,7 +16,7 @@ final TextEditingController controller;
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomTextWidget(title:fieldTitle,fontSize: 10.sp,color: AppColors.welcomeScript,fontWeight: FontWeight.w400,),
+          CustomTextWidget(title:fieldTitle,fontSize: 12.sp,color: AppColors.welcomeScript,fontWeight: FontWeight.w400,),
           SizedBox(height: 1.h,),
           TextField(
             controller: controller,

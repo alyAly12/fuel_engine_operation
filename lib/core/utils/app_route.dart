@@ -1,4 +1,6 @@
 import 'package:activation_app/core/component/custom_issue_sent_success_screen.dart';
+import 'package:activation_app/core/component/empty_home_screen.dart';
+import 'package:activation_app/core/component/empty_screen.dart';
 import 'package:activation_app/features/home_feature/presentation/view/home_screen.dart';
 import 'package:activation_app/features/home_feature/presentation/view/report_issue_screen.dart';
 import 'package:activation_app/features/home_feature/presentation/widgets/notification_widget/notification_view.dart';
@@ -8,9 +10,12 @@ import 'package:activation_app/features/scan_feature/presentation/view/vehicle_a
 import 'package:activation_app/features/scan_feature/presentation/widgets/report_chip_issue_screen.dart';
 import 'package:activation_app/features/side_menu_feature/presentation/view/inner_screen/filter_screen_feature/presentation/view/filter_screen.dart';
 import 'package:activation_app/features/side_menu_feature/presentation/view/inner_screen/history_feature/presentation/view/history_screen.dart';
+import 'package:activation_app/features/side_menu_feature/presentation/view/inner_screen/profile_feature/presentation/view/profile_screen.dart';
+import 'package:activation_app/features/side_menu_feature/presentation/view/inner_screen/search_feature/presentation/view/search_screen.dart';
 import 'package:activation_app/features/side_menu_feature/presentation/view/side_menu_screen.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/side_menu_feature/presentation/view/inner_screen/about_app_feature/about_app_screen.dart';
+import '../../features/side_menu_feature/presentation/view/inner_screen/search_feature/presentation/view/search_result_screen.dart';
 import '../../features/side_menu_feature/presentation/view/inner_screen/help_support_feature/help_and_support.dart';
 import '../../features/splash_feature/presentation/view/splash_view.dart';
 import '../component/custom_activation_success_screen.dart';
@@ -32,6 +37,11 @@ abstract class AppRoute
   static const kHistoryView ='/historyView';
   static const kFilterView ='/filterView';
   static const kNotificationView ='/notificationView';
+  static const kEmptyView ='/emptyView';
+  static const kSearchScreen ='/searchView';
+  static const kSearchResultScreen ='/searchResultScreen';
+  static const kProfileScreen ='/profileView';
+  static const kEmptyHomeScreen ='/emptyHomeScreen';
 
 static final router = GoRouter(
     routes: [
@@ -163,6 +173,51 @@ static final router = GoRouter(
           context: context,
           state: state,
           child: const NotificationScreen(),
+        ),
+      ),
+      GoRoute(
+        path: kEmptyView,
+        builder:(context,state)=>const EmptyScreen(),
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const EmptyScreen(),
+        ),
+      ),
+      GoRoute(
+        path: kSearchScreen,
+        builder:(context,state)=>const SearchScreen(),
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const SearchScreen(),
+        ),
+      ),
+      GoRoute(
+        path: kSearchResultScreen,
+        builder:(context,state)=>const SearchResultScreen(),
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const SearchResultScreen(),
+        ),
+      ),
+      GoRoute(
+        path: kProfileScreen,
+        builder:(context,state)=>const ProfileScreen(),
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const ProfileScreen(),
+        ),
+      ),
+      GoRoute(
+        path: kEmptyHomeScreen,
+        builder:(context,state)=>const EmptyHomeScreen(),
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const EmptyHomeScreen(),
         ),
       ),
     ]);

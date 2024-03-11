@@ -66,11 +66,11 @@ class _ReportChipIssueScreenState extends State<ReportChipIssueScreen> {
                    ReportIssueHeader(headerIssue: AppStrings.reportChipIssue,),
                   SizedBox(height: 6.h,),
                    ReportIssueTextField(fieldTitle: AppStrings.smartChipNumber, controller: chipController,),
-                  SizedBox(height: 8.h,),
+                  SizedBox(height: 7.h,),
                   const IssueTypeList(),
-                  SizedBox(height: 8.h,),
+                  SizedBox(height: 7.h,),
                    ReportIssueTextField(fieldTitle: AppStrings.notes, controller: noteController,),
-                  SizedBox(height: 8.h,),
+                  SizedBox(height: 7.h,),
                   Padding(
                     padding:  EdgeInsets.symmetric(horizontal: 10.w),
                     child: CustomLogButton(

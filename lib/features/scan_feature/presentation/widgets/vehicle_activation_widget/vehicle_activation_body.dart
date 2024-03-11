@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../../../core/component/custom_decorated_line.dart';
 import '../../../../../core/component/custom_key_board.dart';
 import '../../../../../core/component/custom_log_button.dart';
@@ -186,7 +185,7 @@ class _VehicleActivationBodyState extends State<VehicleActivationBody> {
               padding:  EdgeInsets.symmetric(horizontal: 1.h),
               child: CustomLogButton(
                   textColor:Colors.white,
-                  textSize: 9.sp,
+                  textWeight: FontWeight.w500,
                   onPressed: (){
                     upLoadImage();
                   },

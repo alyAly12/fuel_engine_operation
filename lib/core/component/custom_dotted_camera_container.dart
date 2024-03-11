@@ -15,33 +15,33 @@ class CustomDottedCameraContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-        Container(
-            height:heightSize?? 15.h,
-            width:widthSize?? 25.w,
-            decoration: const BoxDecoration(
-              color: Colors.white30,
-              shape: BoxShape.circle,
+        GestureDetector(
+          onTap: onTap,
+          child: Container(
+              height:heightSize?? 15.h,
+              width:widthSize?? 15.h,
+              decoration: const BoxDecoration(
+                color: Colors.white30,
+                shape: BoxShape.circle,
 
-            ),
-            child: DottedBorder(
-              color:color?? Colors.white,
-              strokeWidth: 2,
-              strokeCap: StrokeCap.round,
-              dashPattern: [3, 5],
-              borderType: BorderType.Circle,
-              radius: const Radius.circular(8),
-              padding: const EdgeInsets.all(8),
-              child: ClipRRect(
-                  borderRadius: const BorderRadius.all(Radius.circular(12)),
-                  child: GestureDetector(
-                    onTap:onTap,
+              ),
+              child: DottedBorder(
+                color:color?? Colors.white,
+                strokeWidth: 2,
+                strokeCap: StrokeCap.round,
+                dashPattern: const [3, 5],
+                borderType: BorderType.Circle,
+                radius: const Radius.circular(8),
+                padding: const EdgeInsets.all(8),
+                child: ClipRRect(
+                    borderRadius: const BorderRadius.all(Radius.circular(12)),
                     child: Center(
                       child: Align(
                           alignment: Alignment.center,
                           child: SvgPicture.asset(image,)),
-                    ),
-                  )),
-            )
+                    )),
+              )
+          ),
         ),
         SizedBox(height: 1.h,),
 

@@ -35,22 +35,22 @@ class SideMenuScreen extends StatelessWidget {
                 GoRouter.of(context).pushReplacement(AppRoute.kHomeView);
               },
             ),
+            // CustomTextButton(
+            //   title: AppStrings.setting,
+            //   onPressed: () {
+            //   //   TODO: add setting screen
+            //   },
+            // ),
             CustomTextButton(
-              title: AppStrings.setting,
+              title: AppStrings.profile,
               onPressed: () {
-              //   TODO: add setting screen
-              },
-            ),
-            CustomTextButton(
-              title: AppStrings.vehicle,
-              onPressed: () {
-                //   TODO: add vehicle screen
+               GoRouter.of(context).pushReplacement(AppRoute.kProfileScreen);
               },
             ),
             CustomTextButton(
               title: AppStrings.history,
               onPressed: () {
-                GoRouter.of(context).pushReplacement(AppRoute.kHistoryView);
+                GoRouter.of(context).pushReplacement(AppRoute.kEmptyView);
               },
             ),
             CustomTextButton(

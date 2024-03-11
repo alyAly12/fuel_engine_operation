@@ -28,7 +28,7 @@ class IssueTypeWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           children: [
-            CustomTextWidget(title: type,fontSize: 12.sp,fontWeight: FontWeight.w600,color:titleColor,),
+            CustomTextWidget(title: type,fontSize: 10.sp,fontWeight: FontWeight.w600,color:titleColor,),
           ],
         ),
       ),

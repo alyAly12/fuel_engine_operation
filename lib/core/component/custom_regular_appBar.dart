@@ -8,17 +8,17 @@ import 'custom_text_widget.dart';
 
 class CustomRegularAppBar extends StatelessWidget {
   const CustomRegularAppBar({
-    super.key, required this.mainTitle, required this.actionTitle, this.textSize, this.isVisible =true,
+    super.key, required this.mainTitle, required this.actionTitle, this.textSize, this.isVisible =true, this.backColor,
   });
   final String mainTitle;
   final String? actionTitle;
   final double? textSize;
   final bool? isVisible;
-
+  final Color? backColor;
   @override
   Widget build(BuildContext context) {
     return  AppBar(
-      backgroundColor: AppColors.backGroundColor,
+      backgroundColor:backColor?? AppColors.backGroundColor,
       elevation: 0,
       actions: [
         Visibility(
@@ -29,7 +29,7 @@ class CustomRegularAppBar extends StatelessWidget {
             },
             child: CustomTextWidget(
               title: actionTitle??'',
-              fontSize: 12.sp,
+              fontSize: 13.sp,
               fontWeight: FontWeight.w400,
               color: AppColors.lightTitleColor,
             ),
@@ -37,7 +37,7 @@ class CustomRegularAppBar extends StatelessWidget {
         ),
       ],
       centerTitle: true,
-      title: CustomTextWidget(title: mainTitle,fontSize: textSize??14.sp,color: AppColors.darkGrey,),
+      title: CustomTextWidget(title: mainTitle,fontSize: textSize??15.sp,color: AppColors.darkGrey,),
       leading: Builder(
           builder: (context) {
             return IconButton(

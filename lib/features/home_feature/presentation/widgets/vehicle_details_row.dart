@@ -30,14 +30,14 @@ class VehicleDetailsRow extends StatelessWidget {
             children: [
               CustomTextWidget(
                 title: AppStrings.vehicle,
-                fontSize: 10.sp,
+                fontSize: 11.sp,
                 color: AppColors.vehicleColor,
                 fontWeight: FontWeight.w400,
               ),
               SizedBox(height: 1.h,),
               CustomTextWidget(
                 title: '7403-RUN',
-                fontSize: 12.sp,
+                fontSize: 13.sp,
                 color: AppColors.darkGrey,
                 fontWeight: FontWeight.w400,
               )
@@ -59,7 +59,7 @@ class VehicleDetailsRow extends StatelessWidget {
                 SizedBox(width: 1.w,),
                 CustomTextWidget(
                   title: AppStrings.activated,
-                  fontSize: 10.sp,
+                  fontSize: 11.sp,
                   color: AppColors.vehicleColor,
                   fontWeight: FontWeight.w400,
                 ),

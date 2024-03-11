@@ -25,8 +25,8 @@ class LastActiveListItem extends StatelessWidget {
             color: Colors.transparent,
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.shade300,
-                blurRadius: 10.0,
+                color: Colors.grey.shade200,
+                blurRadius: 4.0,
               ),
             ],
           ),

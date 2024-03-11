@@ -15,19 +15,22 @@ class CustomTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:  EdgeInsets.only(top: 1.h),
-      child: TextButton(
-        onPressed:onPressed,
-        style:TextButton.styleFrom(
-            padding: const EdgeInsets.all(8),
-            minimumSize: const Size(50, 45),
-            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            alignment: Alignment.centerLeft
-        ),
-        child: CustomTextWidget(
-          title:title,
-          color:textColor?? AppColors.appBarColor,
-          fontSize:textSize?? 13.sp,
-          fontWeight: FontWeight.w400,
+      child: SizedBox(
+        width: double.infinity,
+        child: TextButton(
+          onPressed:onPressed,
+          style:TextButton.styleFrom(
+              padding: const EdgeInsets.all(8),
+              minimumSize: const Size(50, 45),
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              alignment: Alignment.centerLeft
+          ),
+          child: CustomTextWidget(
+            title:title,
+            color:textColor?? AppColors.appBarColor,
+            fontSize:textSize?? 13.sp,
+            fontWeight: FontWeight.w400,
+          ),
         ),
       ),
     );

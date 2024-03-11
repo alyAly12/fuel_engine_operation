@@ -20,4 +20,10 @@ class AssetsManager
   static String plateLogo ='assets/images/plate-logo.svg';
   static String closeIcon ='assets/images/close-icon.svg';
   static String rightSign ='assets/images/right-sign.svg';
+  static String operationWhite ='assets/images/opertaion-white.svg';
+  static String noOrderLottie ='assets/images/noOrders-avalible.json';
+  static String person ='assets/images/person.svg';
+  static String sascoLogo ='assets/images/SASCO.svg';
+  static String danger ='assets/images/danger.svg';
+
 }

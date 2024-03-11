@@ -39,7 +39,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8.h),
                     child: SvgPicture.asset(
-                      AssetsManager.appLogo,
+                      AssetsManager.appLogo2,
                       height: 6.h,
                     ),
                   ),
@@ -52,7 +52,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
               ),
             ),
           ]),
-    ).rotate(duration: const Duration(seconds: 1),curve: Curves.fastOutSlowIn);
+    ).animate(delay: const Duration(seconds: 2));
   }
   navigateToPairingScreen() {
     Future.delayed(
