@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class CustomTextWidget extends StatelessWidget {
   const CustomTextWidget(
       {super.key,
@@ -19,7 +20,7 @@ class CustomTextWidget extends StatelessWidget {
       maxLines: maxLines,
       style: TextStyle(
           color: color,
-          fontSize:fontSize??12.sp,
+          fontSize:fontSize??12,
           fontFamily: 'Roboto',
           fontWeight: fontWeight,
           overflow: TextOverflow.ellipsis),

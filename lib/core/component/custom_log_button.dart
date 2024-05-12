@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../core/component/custom_text_widget.dart';
 
 class CustomLogButton extends StatelessWidget {
@@ -22,7 +21,7 @@ class CustomLogButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 6.5.h,
+      height: 60,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: color,
@@ -35,7 +34,7 @@ class CustomLogButton extends StatelessWidget {
             children: [
               CustomTextWidget(
                 title: title,
-                fontSize:textSize??14.sp,
+                fontSize:textSize??14,
                 fontWeight:textWeight?? FontWeight.w300,
                 color: textColor,
               ),

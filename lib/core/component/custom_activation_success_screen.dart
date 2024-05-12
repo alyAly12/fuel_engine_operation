@@ -1,8 +1,8 @@
 import 'package:activation_app/core/component/custom_regular_appBar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sizer/sizer.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_route.dart';
 import '../utils/app_strings.dart';

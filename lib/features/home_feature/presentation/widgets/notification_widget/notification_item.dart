@@ -2,7 +2,7 @@ import 'package:activation_app/core/component/custom_text_widget.dart';
 import 'package:activation_app/core/utils/app_colors.dart';
 import 'package:activation_app/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotificationItem extends StatelessWidget {
   const NotificationItem({super.key, required this.containerColor});

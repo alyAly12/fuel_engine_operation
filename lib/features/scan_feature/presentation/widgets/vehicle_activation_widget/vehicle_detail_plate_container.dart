@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sizer/sizer.dart';
-
 import '../../../../../core/common_state/custom_keyboard_bloc.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/assets_manager.dart';

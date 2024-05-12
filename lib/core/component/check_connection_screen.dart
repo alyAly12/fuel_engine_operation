@@ -1,9 +1,8 @@
 
 import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sizer/sizer.dart';
-
 import '../utils/app_colors.dart';
 import '../utils/assets_manager.dart';
 import 'custom_text_button.dart';

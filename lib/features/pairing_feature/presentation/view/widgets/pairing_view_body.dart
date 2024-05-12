@@ -7,10 +7,9 @@ import 'package:activation_app/core/utils/app_strings.dart';
 import 'package:activation_app/core/utils/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sizer/sizer.dart';
-
 import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/auth_validator.dart';
 import 'custom_toggle_buttons.dart';
@@ -59,27 +58,29 @@ class _PairingViewBodyState extends State<PairingViewBody> {
       child: SingleChildScrollView(
         reverse: true,
         child: Padding(
-          padding: EdgeInsets.only(top: 15.h,left: 5.h,right: 5.h),
+          padding: const EdgeInsets.only(top: 60,left: 5,right: 5),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SvgPicture.asset(AssetsManager.appLogo),
-              SizedBox(
-                height: 6.h,
+              const SizedBox(
+                height: 40,
               ),
-              const CustomToggleButtons(),
-              SizedBox(
-                height: 6.h,
+              const Align(
+                  alignment: Alignment.topCenter,
+                  child: CustomToggleButtons()),
+              const SizedBox(
+                height: 40,
               ),
               Form(
                   key: formKey,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CustomTextWidget(title: AppStrings.userName,fontSize: 10.sp,),
-                      SizedBox(
-                        height: 1.h,
+                      CustomTextWidget(title: AppStrings.userName,fontSize: 12,),
+                      const SizedBox(
+                        height: 10,
                       ),
                       CustomPairingTextField(
                         actionType: TextInputAction.next,
@@ -97,12 +98,12 @@ class _PairingViewBodyState extends State<PairingViewBody> {
                           // loginFct();
                         }, hintTitle: AppStrings.name,
                       ),
-                      SizedBox(
-                        height: 4.h,
+                      const SizedBox(
+                        height: 20,
                       ),
-                      CustomTextWidget(title: AppStrings.passWord,fontSize: 10.sp,),
-                      SizedBox(
-                        height: 1.h,
+                      CustomTextWidget(title: AppStrings.passWord,fontSize: 12,),
+                      const SizedBox(
+                        height: 10,
                       ),
                       CustomPairingTextField(
                         actionType: TextInputAction.done,
@@ -130,18 +131,19 @@ class _PairingViewBodyState extends State<PairingViewBody> {
                       ),
                     ],
                   ),),
-              SizedBox(height: 2.h,),
+              const SizedBox(height: 20,),
               Align(
                   alignment: Alignment.topRight,
-                  child: CustomTextWidget(title: AppStrings.forgetPass,fontSize: 10.sp,color: AppColors.redColor,)),
-              SizedBox(
-                height: 10.h,
+                  child: CustomTextWidget(title: AppStrings.forgetPass,fontSize: 12,color: AppColors.redColor,)),
+              const SizedBox(
+                height: 30,
               ),
               CustomLogButton(
                   onPressed: (){
                     loginFct();
                   },
                   color:AppColors.redColor,
+                  textSize: 16,
                   title: AppStrings.login,
                   textWeight: FontWeight.w500,
                   showIcon: false

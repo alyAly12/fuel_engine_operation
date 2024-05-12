@@ -1,8 +1,8 @@
 import 'package:activation_app/core/utils/app_dialog.dart';
 import 'package:activation_app/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../core/component/custom_log_button.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
@@ -57,20 +57,19 @@ class _ReportChipIssueScreenState extends State<ReportChipIssueScreen> {
         body: SingleChildScrollView(
           reverse: true,
           child: Padding(
-            padding:EdgeInsets.symmetric(horizontal: 4.w),
+            padding:const EdgeInsets.symmetric(horizontal: 10,vertical: 50),
             child: Form(
               key:formKey ,
               child: Column(
                 children: [
-                  SizedBox(height: 10.h,),
                    ReportIssueHeader(headerIssue: AppStrings.reportChipIssue,),
-                  SizedBox(height: 6.h,),
+                  const SizedBox(height: 30,),
                    ReportIssueTextField(fieldTitle: AppStrings.smartChipNumber, controller: chipController,),
-                  SizedBox(height: 7.h,),
+                  const SizedBox(height: 30,),
                   const IssueTypeList(),
-                  SizedBox(height: 7.h,),
+                  const SizedBox(height: 30,),
                    ReportIssueTextField(fieldTitle: AppStrings.notes, controller: noteController,),
-                  SizedBox(height: 7.h,),
+                  const SizedBox(height: 50,),
                   Padding(
                     padding:  EdgeInsets.symmetric(horizontal: 10.w),
                     child: CustomLogButton(
@@ -80,7 +79,7 @@ class _ReportChipIssueScreenState extends State<ReportChipIssueScreen> {
                         color: AppColors.redColor,
                         title: AppStrings.send,
                         textWeight: FontWeight.w500,
-                        textSize: 14.sp,
+                        textSize: 15,
                         showIcon: false
                     ),
                   )

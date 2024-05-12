@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sizer/sizer.dart';
-
 import '../../../../../core/component/custom_text_widget.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_strings.dart';
@@ -15,7 +14,7 @@ final String headerIssue;
       children: [
         CustomTextWidget(
           title: headerIssue,
-          fontSize: 15.sp,
+          fontSize: 15,
           color: AppColors.darkGrey,
           fontWeight: FontWeight.w400,
         ),
@@ -26,7 +25,7 @@ final String headerIssue;
             },
             child: CustomTextWidget(
               title: AppStrings.cancel,
-              fontSize: 12.sp,
+              fontSize: 12,
               color: AppColors.appBarColor,
               fontWeight: FontWeight.w400,
             )),

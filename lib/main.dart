@@ -3,8 +3,8 @@ import 'package:activation_app/core/utils/app_consts.dart';
 import 'package:activation_app/core/utils/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sizer/sizer.dart';
 import 'core/common_state/custom_keyboard_bloc.dart';
 import 'core/component/navigator_global.dart';
 import 'core/utils/app_colors.dart';
@@ -80,23 +80,24 @@ class ActivationApp extends StatelessWidget {
           }
         },
         builder: (context, state) {
-          return Sizer(
-            builder: (context, orientation, deviceType) {
-              return MaterialApp.router(
-                key: navigatorKey,
-                debugShowCheckedModeBanner: false,
-                title: 'Activation-App',
-                theme: ThemeData.light(useMaterial3: false).copyWith(
-                  iconTheme: const IconThemeData(
-                      color: AppColors.appBarColor, size: 0),
-                  textTheme:
-                  GoogleFonts.robotoTextTheme(ThemeData
-                      .light()
-                      .textTheme),
-                ),
-                routerConfig: AppRoute.router,
-              );
-            },
+          return ScreenUtilInit(
+            designSize: const Size(360, 690),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            child: MaterialApp.router(
+              key: navigatorKey,
+              debugShowCheckedModeBanner: false,
+              title: 'Activation-App',
+              theme: ThemeData.light(useMaterial3: false).copyWith(
+                iconTheme: const IconThemeData(
+                    color: AppColors.appBarColor, size: 0),
+                textTheme:
+                GoogleFonts.robotoTextTheme(ThemeData
+                    .light()
+                    .textTheme),
+              ),
+              routerConfig: AppRoute.router,
+            ),
           );
         },
       ),

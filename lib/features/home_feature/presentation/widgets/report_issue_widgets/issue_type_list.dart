@@ -1,6 +1,5 @@
 import 'package:activation_app/features/home_feature/presentation/widgets/report_issue_widgets/issue_type_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_strings.dart';
 
@@ -41,8 +40,8 @@ class _IssueTypeListState extends State<IssueTypeList> {
                     color: AppColors.orderNumberColor, width: 0.7),
               ),
             ),
-            SizedBox(
-              width: 3.w,
+            const SizedBox(
+              width: 10,
             ),
             Flexible(
               flex: 1,
@@ -63,7 +62,7 @@ class _IssueTypeListState extends State<IssueTypeList> {
             )
           ],
         ),
-        SizedBox(height: 2.h,),
+        SizedBox(height: 10,),
         IssueTypeWidget(
           type: AppStrings.nfcDedicate,
           onTap: () {

@@ -1,9 +1,9 @@
 import 'package:activation_app/core/utils/app_colors.dart';
 import 'package:activation_app/features/scan_feature/presentation/widgets/scan_header_container.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../core/component/custom_text_widget.dart';
 import '../../../../core/utils/app_route.dart';
 import '../../../../core/utils/app_strings.dart';
@@ -15,7 +15,7 @@ class ScanViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.h),
+      padding: const EdgeInsets.symmetric(vertical:40),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

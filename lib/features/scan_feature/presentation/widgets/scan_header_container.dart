@@ -1,10 +1,10 @@
 import 'dart:math';
 import 'package:activation_app/features/scan_feature/presentation/widgets/start_scan_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../../../core/component/custom_text_widget.dart';
 import '../../../../../../core/functions/read_nfc_tag.dart';
 import '../../../../../../core/utils/app_colors.dart';
@@ -28,7 +28,7 @@ class _ScanHeaderContainerState extends State<ScanHeaderContainer> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 1.h,horizontal: 1.h ),
+      padding: const EdgeInsets.symmetric(vertical: 1,horizontal: 1 ),
       child: GestureDetector(
         onTap: (){
           GoRouter.of(context).push(AppRoute.kVehicleActivationScreen);
@@ -49,16 +49,16 @@ class _ScanHeaderContainerState extends State<ScanHeaderContainer> {
                         )),
                   ),
                   Positioned(
-                    top: 3.h,
+                    top: 3,
                     child: SvgPicture.asset(AssetsManager.nfcCircle,fit: BoxFit.contain,),
                   ),
                   Positioned(
-                    bottom: 5.5.h,
+                    bottom: 60,
                     child: CustomTextWidget(
                       title: AppStrings.scanDevice,
                       color: AppColors.lightTitleColor,
                       fontWeight: FontWeight.w500,
-                      fontSize: 12.sp,
+                      fontSize: 12,
                     ),
                   ),
                   Positioned(

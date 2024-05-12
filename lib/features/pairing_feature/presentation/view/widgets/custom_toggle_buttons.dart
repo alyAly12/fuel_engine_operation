@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sizer/sizer.dart';
-
 import '../../../../../core/component/custom_text_widget.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_strings.dart';
@@ -31,7 +30,7 @@ class _CustomToggleButtonsState extends State<CustomToggleButtons> {
       isSelected: isSelected,
       children: [
         Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 8.w,vertical: 1.h),
+          padding:  const EdgeInsets.symmetric(horizontal: 40,vertical: 1),
           child: Row(
             children: [
               SvgPicture.asset(AssetsManager.operationLogo,),
@@ -41,7 +40,7 @@ class _CustomToggleButtonsState extends State<CustomToggleButtons> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 1.h),
+          padding: EdgeInsets.symmetric(horizontal: 40,vertical: 1),
           child: Row(
             children: [
               SvgPicture.asset(AssetsManager.partnerLogo),

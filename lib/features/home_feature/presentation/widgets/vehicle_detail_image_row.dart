@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/assets_manager.dart';
 
@@ -14,8 +13,8 @@ class VehicleDetailImageRow extends StatelessWidget {
         Card(
           elevation: 2,
           child: Container(
-            height: 20.h,
-            width: 40.w,
+            height: 100,
+            width: 100,
             decoration: BoxDecoration(
               border: Border.all(
                   width: 1,
@@ -32,12 +31,12 @@ class VehicleDetailImageRow extends StatelessWidget {
             child: Image.asset(AssetsManager.plates,fit: BoxFit.cover,),
           ),
         ),
-        SizedBox(width: 5.w,),
+        SizedBox(width: 30,),
         Card(
           elevation: 2,
           child: Container(
-            height: 20.h,
-            width: 40.w,
+            height: 100,
+            width: 100,
             decoration: BoxDecoration(
               border: Border.all(
                   width: 1,

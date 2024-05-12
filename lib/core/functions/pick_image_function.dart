@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:sizer/sizer.dart';
 import 'dart:io';
 import '../component/custom_dotted_camera_container.dart';
 import '../component/custom_text_widget.dart';
@@ -36,8 +36,8 @@ class PickImageFunction extends StatelessWidget {
               );
             },
             child: Container(
-              width: 15.h,
-              height: 15.h,
+              width: 80,
+              height: 80,
               decoration: const BoxDecoration(
                   shape: BoxShape.circle, color: Colors.transparent),
               child: ClipOval(

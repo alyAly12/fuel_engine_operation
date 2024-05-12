@@ -1,7 +1,7 @@
 import 'package:activation_app/features/scan_feature/presentation/widgets/scan_view_body.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../core/component/custom_text_widget.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';

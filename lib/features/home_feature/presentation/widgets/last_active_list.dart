@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'last_active_item.dart';
 
 
@@ -9,12 +9,12 @@ class LastActiveList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-        padding:  EdgeInsets.only(top: 1.h),
+        padding:  const EdgeInsets.only(top: 10),
         itemBuilder: (context,index){
           return const LastActiveListItem();
         },
         separatorBuilder: (context,index){
-          return SizedBox(height: 0.1.h,);
+          return const SizedBox(height: 1,);
         },
         itemCount: 10);
   }

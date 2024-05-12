@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../common_state/custom_keyboard_bloc.dart';
 import '../utils/app_colors.dart';
 import 'custom_text_widget.dart';

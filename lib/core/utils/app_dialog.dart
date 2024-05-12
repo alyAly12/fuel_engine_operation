@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../component/custom_text_widget.dart';
 import '../component/subtitle_text_widget.dart';
 import 'app_colors.dart';

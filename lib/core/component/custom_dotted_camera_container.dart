@@ -1,7 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sizer/sizer.dart';
 
 class CustomDottedCameraContainer extends StatelessWidget {
   const CustomDottedCameraContainer({super.key, required this.image, this.onTap, this.color, this.heightSize, this.widthSize,});
@@ -18,8 +17,8 @@ class CustomDottedCameraContainer extends StatelessWidget {
         GestureDetector(
           onTap: onTap,
           child: Container(
-              height:heightSize?? 15.h,
-              width:widthSize?? 15.h,
+              height:heightSize?? 80,
+              width:widthSize?? 80,
               decoration: const BoxDecoration(
                 color: Colors.white30,
                 shape: BoxShape.circle,
@@ -43,7 +42,7 @@ class CustomDottedCameraContainer extends StatelessWidget {
               )
           ),
         ),
-        SizedBox(height: 1.h,),
+        const SizedBox(height: 10,),
 
       ],
     );

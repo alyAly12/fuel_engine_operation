@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sizer/sizer.dart';
-
 import '../../../../core/component/custom_text_widget.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
@@ -18,7 +17,7 @@ class CustomHeaderContainer extends StatelessWidget {
       padding: EdgeInsets.zero,
       color: Colors.white,
       child: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 3.w),
+        padding:  const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -30,28 +29,28 @@ class CustomHeaderContainer extends StatelessWidget {
                       GoRouter.of(context).push(AppRoute.kSideMenuView);
                     },
                     icon: const Icon(Icons.menu,size: 30,color: AppColors.appBarColor,)),
-                SizedBox(width: 2.w,),
+                const SizedBox(width: 15,),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CustomTextWidget(title: AppStrings.welcome,color: AppColors.orderNumberColor,fontSize: 9.sp,),
-                    CustomTextWidget(title: 'Ahmed Sami',color: AppColors.darkGrey,fontSize: 12.sp,),
+                    CustomTextWidget(title: AppStrings.welcome,color: AppColors.orderNumberColor,fontSize: 10),
+                    const CustomTextWidget(title: 'Ahmed Sami',color: AppColors.darkGrey,fontSize: 14),
                   ],
                 ),
                 const Spacer(),
                 Padding(
-                  padding:  EdgeInsets.symmetric(horizontal: 2.w),
+                  padding:  const EdgeInsets.symmetric(horizontal: 10),
                   child: GestureDetector(
                     onTap: (){
                      GoRouter.of(context).push(AppRoute.kNotificationView);
                     },
-                    child: Badge(
-                        label: const Text('3'),
-                        smallSize: 1.6.h,
-                        largeSize: 2.h,
+                    child: const Badge(
+                        label: Text('3'),
+                        smallSize: 20,
+                        largeSize: 20,
                         backgroundColor: AppColors.redColor,
-                        child: const Icon(Icons.notifications,size: 30,color: AppColors.appBarColor,)),
+                        child: Icon(Icons.notifications,size: 30,color: AppColors.appBarColor,)),
                   ),
                 ),
 

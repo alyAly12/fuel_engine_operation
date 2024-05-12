@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
-
 import '../../../../core/component/custom_text_widget.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
@@ -21,23 +19,23 @@ class VehicleDetailsRow extends StatelessWidget {
             backgroundColor: AppColors.greyColor,
           ),
         ),
-        SizedBox(width: 3.w,),
+        const SizedBox(width: 30,),
         Padding(
-          padding:  EdgeInsets.symmetric(vertical: 3.h),
+          padding:  const EdgeInsets.symmetric(vertical: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomTextWidget(
                 title: AppStrings.vehicle,
-                fontSize: 11.sp,
+                fontSize: 12,
                 color: AppColors.vehicleColor,
                 fontWeight: FontWeight.w400,
               ),
-              SizedBox(height: 1.h,),
-              CustomTextWidget(
+              const SizedBox(height: 10,),
+              const CustomTextWidget(
                 title: '7403-RUN',
-                fontSize: 13.sp,
+                fontSize: 14,
                 color: AppColors.darkGrey,
                 fontWeight: FontWeight.w400,
               )
@@ -46,28 +44,28 @@ class VehicleDetailsRow extends StatelessWidget {
         ),
         const Spacer(),
         Padding(
-          padding:  EdgeInsets.symmetric(vertical: 3.h),
+          padding:  const EdgeInsets.symmetric(vertical: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(children: [
-                CircleAvatar(
-                  radius: 0.5.h,
+                const CircleAvatar(
+                  radius: 5,
                   backgroundColor: AppColors.activeColor,
                 ),
-                SizedBox(width: 1.w,),
+                const SizedBox(width: 10,),
                 CustomTextWidget(
                   title: AppStrings.activated,
-                  fontSize: 11.sp,
+                  fontSize: 12,
                   color: AppColors.vehicleColor,
                   fontWeight: FontWeight.w400,
                 ),
               ],),
-              SizedBox(height: 1.h,),
-              CustomTextWidget(
+              const SizedBox(height: 10,),
+              const CustomTextWidget(
                 title: 'Sun Jul 9, 2023 @10:14 am',
-                fontSize: 10.sp,
+                fontSize: 10,
                 color: AppColors.lightTitleColor,
                 fontWeight: FontWeight.w300,
               )

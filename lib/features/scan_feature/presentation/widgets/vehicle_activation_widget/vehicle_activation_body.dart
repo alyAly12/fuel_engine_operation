@@ -1,8 +1,8 @@
 import 'package:activation_app/features/scan_feature/presentation/widgets/vehicle_activation_widget/vehicle_detail_plate_container.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../../core/component/custom_decorated_line.dart';
 import '../../../../../core/component/custom_key_board.dart';
 import '../../../../../core/component/custom_log_button.dart';
@@ -91,22 +91,22 @@ class _VehicleActivationBodyState extends State<VehicleActivationBody> {
     return SingleChildScrollView(
       reverse: true,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 4.w),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(height: 6.h,),
+            const SizedBox(height: 20,),
             Align(
               alignment: Alignment.topLeft,
               child: CustomTextWidget(
                 title: AppStrings.plateNumber,
-                fontSize: 12.sp,
+                fontSize: 14,
                 color: AppColors.darkGrey,
               ),
             ),
-            SizedBox(
-              height: 2.h,
+            const SizedBox(
+              height: 10,
             ),
             VehicleDetailsPlateContainer(
               keyForm: formKey,
@@ -128,7 +128,7 @@ class _VehicleActivationBodyState extends State<VehicleActivationBody> {
               } ,
             ),
 
-            SizedBox(height: 1.h,),
+            const SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -136,14 +136,14 @@ class _VehicleActivationBodyState extends State<VehicleActivationBody> {
                   flex:6,
                   child: CustomDecoratedTextLine(title: AppStrings.numbers),
                 ),
-                SizedBox(width: 8.w,),
+                const SizedBox(width: 5,),
                 Flexible(
                   flex:5,
                   child: CustomDecoratedTextLine(title: AppStrings.letters),
                 ),
               ],
             ),
-            SizedBox(height: 5.h,),
+            const SizedBox(height: 40,),
             Padding(
               padding:  EdgeInsets.symmetric(horizontal: 6.w),
               child: Row(
@@ -178,11 +178,11 @@ class _VehicleActivationBodyState extends State<VehicleActivationBody> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 10.h,
+            const SizedBox(
+              height: 50,
             ),
             Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 1.h),
+              padding:  const EdgeInsets.symmetric(horizontal: 5),
               child: CustomLogButton(
                   textColor:Colors.white,
                   textWeight: FontWeight.w500,

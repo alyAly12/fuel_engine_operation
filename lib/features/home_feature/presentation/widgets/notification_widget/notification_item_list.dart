@@ -1,6 +1,6 @@
 import 'package:activation_app/features/home_feature/presentation/widgets/notification_widget/notification_item.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotificationItemList extends StatelessWidget {
   const NotificationItemList({super.key});

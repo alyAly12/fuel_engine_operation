@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
-
 import '../utils/app_colors.dart';
 import 'custom_text_widget.dart';
 
@@ -14,7 +12,7 @@ class CustomTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.only(top: 1.h),
+      padding:  const EdgeInsets.only(top:10),
       child: SizedBox(
         width: double.infinity,
         child: TextButton(
@@ -28,7 +26,7 @@ class CustomTextButton extends StatelessWidget {
           child: CustomTextWidget(
             title:title,
             color:textColor?? AppColors.appBarColor,
-            fontSize:textSize?? 13.sp,
+            fontSize:textSize?? 14,
             fontWeight: FontWeight.w400,
           ),
         ),

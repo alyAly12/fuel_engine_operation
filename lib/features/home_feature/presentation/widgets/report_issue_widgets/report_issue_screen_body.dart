@@ -10,8 +10,8 @@ import 'package:activation_app/features/home_feature/presentation/widgets/report
 import 'package:activation_app/features/home_feature/presentation/widgets/vehicle_detail_image_row.dart';
 import 'package:activation_app/features/home_feature/presentation/widgets/vehicle_details_row.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sizer/sizer.dart';
 
 
 class ReportIssueScreenBody extends StatefulWidget {

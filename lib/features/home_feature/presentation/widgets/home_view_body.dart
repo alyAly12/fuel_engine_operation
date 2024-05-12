@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_scroll_shadow/flutter_scroll_shadow.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../core/component/custom_text_widget.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
@@ -14,11 +14,11 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-        SizedBox(height: 7.h,),
+        const SizedBox(height: 10,),
          const CustomHeaderContainer(),
         Padding(
-          padding:  EdgeInsets.only(top: 3.h,bottom: 3.h),
-          child: CustomTextWidget(title: AppStrings.lastActive,color: AppColors.lightTitleColor,fontWeight: FontWeight.w400,),
+          padding:  const EdgeInsets.only(top: 10,bottom: 10),
+          child: CustomTextWidget(title: AppStrings.lastActive,color: AppColors.lightTitleColor,fontWeight: FontWeight.w400,fontSize: 14,),
         ),
            Expanded(child: ScrollShadow(
              size: 15,

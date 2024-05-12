@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
-
 import '../utils/app_colors.dart';
 import 'custom_text_widget.dart';
 
@@ -13,8 +11,8 @@ class CustomGradientContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 8.h,
-      width:20.w,
+      height: 60,
+      width:80,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           gradient: LinearGradient(
@@ -25,8 +23,8 @@ class CustomGradientContainer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CustomTextWidget(title: firstTitle,fontSize: 10.sp,color: AppColors.appBarColor,),
-          CustomTextWidget(title: secTitle,fontSize: 12.sp,color: AppColors.appBarColor,fontWeight: FontWeight.w500,),
+          CustomTextWidget(title: firstTitle,fontSize: 12,color: AppColors.appBarColor,),
+          CustomTextWidget(title: secTitle,fontSize: 14,color: AppColors.appBarColor,fontWeight: FontWeight.w500,),
         ],
       ),
     );

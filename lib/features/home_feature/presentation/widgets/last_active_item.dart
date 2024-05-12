@@ -1,6 +1,6 @@
 import 'package:activation_app/features/home_feature/presentation/widgets/detail_modal_sheet.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/component/custom_text_widget.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
@@ -19,7 +19,7 @@ class LastActiveListItem extends StatelessWidget {
             });
       },
       child: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 2.w),
+        padding:  const EdgeInsets.symmetric(horizontal: 10),
         child: Container(
           decoration: BoxDecoration(
             color: Colors.transparent,
@@ -34,7 +34,7 @@ class LastActiveListItem extends StatelessWidget {
               elevation: 1,
               color: Colors.white,
               child: Padding(
-                padding:  EdgeInsets.symmetric(horizontal: 3.w),
+                padding:  const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   children: [
                     const CircleAvatar(
@@ -45,23 +45,23 @@ class LastActiveListItem extends StatelessWidget {
                         backgroundColor: AppColors.greyColor,
                       ),
                     ),
-                    SizedBox(width: 3.w,),
+                    const SizedBox(width: 10,),
                     Padding(
-                      padding:  EdgeInsets.symmetric(vertical: 3.h),
+                      padding:  const EdgeInsets.symmetric(vertical: 30),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           CustomTextWidget(
                             title: AppStrings.vehicle,
-                            fontSize: 10.sp,
+                            fontSize: 12,
                             color: AppColors.vehicleColor,
                             fontWeight: FontWeight.w400,
                           ),
-                          SizedBox(height: 1.h,),
+                          const SizedBox(height: 10,),
                           CustomTextWidget(
                             title: '7403-RUN',
-                            fontSize: 12.sp,
+                            fontSize: 14.sp,
                             color: AppColors.darkGrey,
                             fontWeight: FontWeight.w400,
                           )
@@ -70,28 +70,28 @@ class LastActiveListItem extends StatelessWidget {
                     ),
                     const Spacer(),
                     Padding(
-                      padding:  EdgeInsets.symmetric(vertical: 3.h),
+                      padding:  const EdgeInsets.symmetric(vertical: 30),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Row(children: [
-                            CircleAvatar(
-                              radius: 0.5.h,
+                            const CircleAvatar(
+                              radius: 5,
                               backgroundColor: AppColors.activeColor,
                             ),
-                            SizedBox(width: 1.w,),
+                            const SizedBox(width: 10,),
                             CustomTextWidget(
                               title: AppStrings.activated,
-                              fontSize: 10.sp,
+                              fontSize: 12,
                               color: AppColors.vehicleColor,
                               fontWeight: FontWeight.w400,
                             ),
                           ],),
-                          SizedBox(height: 1.h,),
+                          const SizedBox(height: 10,),
                           CustomTextWidget(
                             title: 'Sun Jul 9, 2023 @10:14 am',
-                            fontSize: 10.sp,
+                            fontSize: 12.sp,
                             color: AppColors.lightTitleColor,
                             fontWeight: FontWeight.w300,
                           )
