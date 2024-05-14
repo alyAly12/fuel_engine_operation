@@ -8,9 +8,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'core/common_state/custom_keyboard_bloc.dart';
 import 'core/component/navigator_global.dart';
 import 'core/utils/app_colors.dart';
+import 'core/services/service_locator.dart' as di;
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
+  di.init();
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home:  ActivationApp(),

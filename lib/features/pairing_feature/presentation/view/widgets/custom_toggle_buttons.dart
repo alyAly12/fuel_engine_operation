@@ -14,7 +14,8 @@ class CustomToggleButtons extends StatefulWidget {
 }
 
 class _CustomToggleButtonsState extends State<CustomToggleButtons> {
-  List<bool> isSelected=[true,false];
+  List<bool> isSelected=[true  ,false];
+
   @override
   Widget build(BuildContext context) {
     return ToggleButtons(
@@ -40,7 +41,7 @@ class _CustomToggleButtonsState extends State<CustomToggleButtons> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 40,vertical: 1),
+          padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 1),
           child: Row(
             children: [
               SvgPicture.asset(AssetsManager.partnerLogo),
@@ -55,6 +56,7 @@ class _CustomToggleButtonsState extends State<CustomToggleButtons> {
           for (int index = 0; index < isSelected.length; index++) {
             if (index == newIndex) {
               isSelected[index] = true;
+
             } else {
               isSelected[index] = false;
             }

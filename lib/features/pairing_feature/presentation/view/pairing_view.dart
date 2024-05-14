@@ -7,6 +7,9 @@ class PairingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget>page=[
+
+    ];
     return GestureDetector(
       onTap: (){
         FocusScope.of(context).unfocus();
