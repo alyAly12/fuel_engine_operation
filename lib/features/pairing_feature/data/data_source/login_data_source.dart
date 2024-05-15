@@ -28,10 +28,15 @@ class LoginDataSourceImpl implements LoginDataSource {
       return Future.value(
         LoginResponseModel.fromJson(responseData),
       );
-    }else{
+    }else if (response.statusCode ==405){
       throw ServerException(
           message:  (response.data as Map<String, dynamic>)["message"],
           statusCode:response.statusCode??0,
+      );
+    }else{
+      throw ServerException(
+        message:  (response.data as Map<String, dynamic>)["message"],
+        statusCode:response.statusCode??0,
       );
     }
   }

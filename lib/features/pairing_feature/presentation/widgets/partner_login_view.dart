@@ -104,7 +104,7 @@ class _PartnerLoginViewState extends State<PartnerLoginView> {
               CustomPairingTextField(
                 actionType: TextInputAction.done,
                 suffixVisible: true,
-                keyType: TextInputType.number,
+                keyType: TextInputType.multiline,
                 controller: passWordController,
                 focusNode: passNode,
                 obscureText: obscureText,
