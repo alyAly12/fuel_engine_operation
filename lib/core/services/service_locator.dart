@@ -1,3 +1,8 @@
+import 'package:activation_app/features/pairing_feature/data/data_source/login_data_source.dart';
+import 'package:activation_app/features/pairing_feature/data/repository/login_repo_impl.dart';
+import 'package:activation_app/features/pairing_feature/domain/repository/login_repository.dart';
+import 'package:activation_app/features/pairing_feature/domain/use_case/login_use_case.dart';
+import 'package:activation_app/features/pairing_feature/presentation/login_bloc/login_bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
@@ -27,19 +32,23 @@ void init() {
 
 void registerRemoteDataSource() {
   sl.registerLazySingleton<SplashRemoteDataSource>(() => SplashRemoteDataSourceImpl(service: sl()));
+  sl.registerLazySingleton<LoginDataSource>(() => LoginDataSourceImpl(service: sl()));
 }
 
 void registerUseCase() {
 
   sl.registerLazySingleton(() => SplashUseCase(sl()));
+  sl.registerLazySingleton(() => LoginUseCase(sl()));
 }
 
 void registerRepositories() {
   sl.registerLazySingleton<SplashRepository>(() => SplashRepoImpl(sl()));
+  sl.registerLazySingleton<LoginRepository>(() => LoginRepoImpl(loginDataSource: sl()));
 }
 
 void registerBloc() {
 
   sl.registerLazySingleton(() => SplashBloc(sl<SplashUseCase>()));
+  sl.registerLazySingleton(() => LoginBloc(sl<LoginUseCase>()));
 
 }

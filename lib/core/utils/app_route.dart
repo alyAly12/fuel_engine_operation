@@ -2,13 +2,13 @@ import 'package:activation_app/core/component/custom_issue_sent_success_screen.d
 import 'package:activation_app/core/component/empty_home_screen.dart';
 import 'package:activation_app/core/component/empty_screen.dart';
 import 'package:activation_app/features/home_feature/presentation/widgets/notification_widget/notification_view.dart';
-import 'package:activation_app/features/pairing_feature/presentation/view/pairing_view.dart';
 import 'package:activation_app/features/scan_feature/presentation/view/scan_screen.dart';
 import 'package:activation_app/features/scan_feature/presentation/view/vehicle_activation_screen.dart';
 import 'package:activation_app/features/scan_feature/presentation/widgets/report_chip_issue_screen.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/home_feature/presentation/screens/home_screen.dart';
 import '../../features/home_feature/presentation/screens/report_issue_screen.dart';
+import '../../features/pairing_feature/presentation/screen/pairing_view.dart';
 import '../../features/side_menu_feature/presentation/screens/inner_screen/about_app_feature/about_app_screen.dart';
 import '../../features/side_menu_feature/presentation/screens/inner_screen/filter_screen_feature/presentation/view/filter_screen.dart';
 import '../../features/side_menu_feature/presentation/screens/inner_screen/help_support_feature/help_and_support.dart';
