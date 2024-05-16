@@ -11,6 +11,7 @@ class PairingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return BlocProvider(
       create: (context) => LoginBloc(sl<LoginUseCase>()),
       child: GestureDetector(

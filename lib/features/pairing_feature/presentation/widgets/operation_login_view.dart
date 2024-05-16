@@ -56,7 +56,8 @@ class _OperationLoginViewState extends State<OperationLoginView> {
       sl<LoginBloc>().add(LoginUserEvent(LoginRequestEntity(
           userName: userNameController.text,
           password: passWordController.text,
-          type: 'operation')));
+          type: 'operation',
+      )));
       setState(() {
         loading = false;
       });

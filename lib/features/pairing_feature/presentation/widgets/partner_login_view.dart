@@ -54,7 +54,8 @@ class _PartnerLoginViewState extends State<PartnerLoginView> {
       sl<LoginBloc>().add(LoginUserEvent(LoginRequestEntity(
           userName: userNameController.text,
           password: passWordController.text,
-          type: 'partner'))
+          type: 'partner',
+      ))
       );
       setState(() {
         loading = false;

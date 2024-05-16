@@ -19,7 +19,7 @@ class LoginDataSourceImpl implements LoginDataSource {
   @override
   Future<LoginResponseModel> login(
       LoginRequestEntity loginRequestEntity) async {
-    final response = await _service.unAuthedDio.post(EndPoints.settingEndPoint,
+    final response = await _service.unAuthedDio.post(EndPoints.loginEndPoint,
         data: jsonEncode(loginRequestEntity.toJson()));
     if (response.statusCode == 201 ||
         response.statusCode == 200 &&
@@ -27,11 +27,6 @@ class LoginDataSourceImpl implements LoginDataSource {
       final Map<String,dynamic>responseData = response.data;
       return Future.value(
         LoginResponseModel.fromJson(responseData),
-      );
-    }else if (response.statusCode ==405){
-      throw ServerException(
-          message:  (response.data as Map<String, dynamic>)["message"],
-          statusCode:response.statusCode??0,
       );
     }else{
       throw ServerException(

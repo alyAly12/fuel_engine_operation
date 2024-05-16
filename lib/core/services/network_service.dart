@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
 import 'package:uuid/uuid.dart';
-
 import '../utils/app_consts.dart';
 import '../utils/end_points.dart';
 
@@ -37,6 +35,7 @@ class NetworkService {
 
   NetworkService._() {
     unAuthedDio.options.baseUrl = _baseURL;
+
     unAuthedDio.options.connectTimeout = Duration(seconds: 50);
     authenticatedDio.options.baseUrl = _baseURL;
     authenticatedDio.options.connectTimeout = Duration(seconds: 50);

@@ -4,11 +4,14 @@ class LoginRequestModel extends LoginRequestEntity {
   LoginRequestModel({userName, password, type})
       : super(userName: userName, password: password, type: type);
 
+
+  @override
   Map<String,dynamic>toJson(){
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['username'] = userName;
     data['password'] = password;
     data['type'] = type;
+
     return data;
   }
 }
