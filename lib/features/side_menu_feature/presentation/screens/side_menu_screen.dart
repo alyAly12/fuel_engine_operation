@@ -21,7 +21,7 @@ class SideMenuScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             GestureDetector(
-                onTap: (){
+                onTap: () {
                   GoRouter.of(context).pop();
                 },
                 child: SvgPicture.asset(AssetsManager.closeIcon)),
@@ -43,7 +43,7 @@ class SideMenuScreen extends StatelessWidget {
             CustomTextButton(
               title: AppStrings.profile,
               onPressed: () {
-               GoRouter.of(context).pushReplacement(AppRoute.kProfileScreen);
+                GoRouter.of(context).pushReplacement(AppRoute.kProfileScreen);
               },
             ),
             CustomTextButton(
@@ -66,9 +66,7 @@ class SideMenuScreen extends StatelessWidget {
             ),
             CustomTextButton(
               title: AppStrings.logOut,
-              onPressed: () {
-                //   TODO: add logout fun
-              },
+              onPressed: () {},
               textColor: AppColors.redColor,
             ),
             const SizedBox(
